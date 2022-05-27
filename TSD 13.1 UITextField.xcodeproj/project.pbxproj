@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8470A742840AD7B0070D9AF /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8470A732840AD7B0070D9AF /* EnterViewController.swift */; };
 		E8B0DCB0283FAC1D00D6894A /* AuthenticationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0DCAF283FAC1D00D6894A /* AuthenticationModule.swift */; };
 		E8CB563E283E840C00686D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CB563D283E840C00686D67 /* AppDelegate.swift */; };
 		E8CB5640283E840C00686D67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CB563F283E840C00686D67 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8470A732840AD7B0070D9AF /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
 		E8B0DCAF283FAC1D00D6894A /* AuthenticationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModule.swift; sourceTree = "<group>"; };
 		E8CB563A283E840C00686D67 /* TSD 13.1 UITextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TSD 13.1 UITextField.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CB563D283E840C00686D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E8CB563D283E840C00686D67 /* AppDelegate.swift */,
 				E8CB563F283E840C00686D67 /* SceneDelegate.swift */,
 				E8CB5641283E840C00686D67 /* ViewController.swift */,
+				E8470A732840AD7B0070D9AF /* EnterViewController.swift */,
 				E8CB5651283E842A00686D67 /* Model.swift */,
 				E8B0DCAF283FAC1D00D6894A /* AuthenticationModule.swift */,
 				E8CB5643283E840C00686D67 /* Main.storyboard */,
@@ -149,6 +152,7 @@
 				E8CB5640283E840C00686D67 /* SceneDelegate.swift in Sources */,
 				E8CB5652283E842A00686D67 /* Model.swift in Sources */,
 				E8B0DCB0283FAC1D00D6894A /* AuthenticationModule.swift in Sources */,
+				E8470A742840AD7B0070D9AF /* EnterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

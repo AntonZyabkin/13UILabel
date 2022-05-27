@@ -64,3 +64,4 @@ func createLabel (label : UILabel, coord : CGRect, text: String, textColor : UIC
     label.backgroundColor = backgroundColor
     vC.view.addSubview(label)
 }
+

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.lightGray
 
         // создадим и добавим несколько ТФ на Вью с помощью функции createTF
-        
+        print("i did it")
         firstNameTF = createTextField(coord: CGRect(x: 30, y: 150, width: 300, height: 40),
                                           plaseHolder: "First name",
                                           vC: self,
@@ -35,17 +35,23 @@ class ViewController: UIViewController {
                                          jump: -50)
 
         paddingView.setImage(UIImage(systemName: "eye.slash")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        
         passwordTF.rightView = paddingView
         passwordTF.rightViewMode = UITextField.ViewMode.always
+        passwordTF.isSecureTextEntry = true
+        usersData["admin"] = "admin"
+
+
 
         // создадим две кнопки
         
         let singInButton = createButton(title: "sing in", coord: CGRect(x: view.center.x - 150, y: 490, width: 300, height: 40), color: .red, vC: self)
         
         let registrationButton = createButton(title: "registration", coord: CGRect(x: view.center.x - 150, y: 440, width: 300, height: 40), color: .green, vC: self)
+       
         //MARK: - All targets
         paddingView.addTarget(self, action: #selector(securePassword), for: .touchUpInside)
-    
+        singInButton.addTarget(self, action: #selector(goEnterVC), for: .touchUpInside)
         registrationButton.addTarget(self, action: #selector(registration), for: .touchUpInside)
         
     }
@@ -71,24 +77,13 @@ class ViewController: UIViewController {
     // регистрация пользователя
     @objc func registration (sender: UIButton) {
         checkTextField (vC: self)
-        print ((firstNameTF.text?.isEmpty)!)
-        self.animateView(sender)
+        
     }
-    
-    //Анимация нажатия кнопки
-    fileprivate func animateView (_ viewToAnimate : UIView) {
-        UIView.animate(withDuration: 0.05, delay: 0, usingSpringWithDamping: 20, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
-            viewToAnimate.transform = CGAffineTransform (scaleX: 0.95, y: 0.95)
-            
-        }) { (_) in
-            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
-                viewToAnimate.transform = CGAffineTransform (scaleX: 1, y: 1)
-
-            }, completion: nil)
-            
-        }
+    @objc func goEnterVC () {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let nextScreen = mainStoryboard.instantiateViewController(identifier: "EnterViewController") as? EnterViewController else {return}
+        nextScreen.modalPresentationStyle = .fullScreen
+        self.show(nextScreen, sender: nil)
     }
-    
-
 }
 

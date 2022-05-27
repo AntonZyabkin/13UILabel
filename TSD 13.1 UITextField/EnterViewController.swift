@@ -8,22 +8,23 @@
 import UIKit
 
 class EnterViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.lightGray
 
-        // Do any additional setup after loading the view.
+        
+        emailTF = createTextField(coord: CGRect(x: 30, y: 290, width: 300, height: 40),
+                                      plaseHolder: "e-mail",
+                                      vC: self,
+                                      jump: -50)
+        passwordTF = createTextField(coord: CGRect(x: 30, y: 360, width: 300, height: 40),
+                                         plaseHolder: "Password",
+                                         vC: self,
+                                         jump: -50)
+        
+        let singInButton = createButton(title: "sing in", coord: CGRect(x: view.center.x - 150, y: 490, width: 300, height: 40), color: .red, vC: self)
+
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
